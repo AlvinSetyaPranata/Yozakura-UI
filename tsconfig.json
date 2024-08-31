@@ -13,7 +13,7 @@
     "outDir": "dist",
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["src/components/*"]
+      "@atoms/*": ["src/atoms/*"]
     }
   },
   "include": ["src"]
