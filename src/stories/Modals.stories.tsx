@@ -12,6 +12,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    text: "This a simple modals"
+    text: "This just a regular Modal"
   }
 };

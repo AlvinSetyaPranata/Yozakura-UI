@@ -3,7 +3,7 @@ import { IModalsProps } from "src/types/Modals";
 
 const Modals: React.FC<IModalsProps> = ({text, onYes, onNo}) => {
   return (
-    <div className="flex flex-col box-border px-2 pt-12 py-4 items-center max-w-[250px] max-h-[500px] rounded-md bg-night text-white dark:bg-sakura dark:text-black">
+    <div className="flex flex-col box-border px-2 py-12 items-center max-w-[250px] max-h-[500px] rounded-md bg-night text-white dark:bg-sakura dark:text-black">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
@@ -16,7 +16,7 @@ const Modals: React.FC<IModalsProps> = ({text, onYes, onNo}) => {
           clipRule="evenodd"
         />
       </svg>
-      <h1 className="mt-6 text-center ">{text}</h1>
+      <h1 className="mt-6 text-center line-clamp-2">{text}</h1>
       <div className="flex flex-col gap-y-4 mt-8 text-sm">
         <button onClick={onYes} className="py-2 px-14 rounded-md text-sm border-2 border-white text-white dark:border-night dark:text-black">YES</button>
         <button onClick={onNo} className="px-14 py-2 rounded-md bg-white text-black dark:bg-black dark:text-white">NO</button>
