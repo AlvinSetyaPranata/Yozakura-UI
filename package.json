@@ -36,6 +36,8 @@
     "@storybook/addon-links": "^8.2.9",
     "@storybook/addon-onboarding": "^8.2.9",
     "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/addon-themes": "^8.2.9",
+    "@storybook/addon-toolbars": "^8.2.9",
     "@storybook/addons": "^7.6.17",
     "@storybook/blocks": "^8.2.9",
     "@storybook/builder-vite": "^8.2.9",

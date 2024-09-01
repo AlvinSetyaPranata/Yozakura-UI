@@ -1,9 +1,11 @@
-// .storybook/theme.js
 import { create } from '@storybook/theming';
 
 export default create({
-  base: 'light', // or 'dark'
+  base: 'dark', // Choose between 'light' or 'dark' as a base theme
   brandTitle: 'Yozakura UI',
-  brandUrl: 'https://yourdomain.com',
-  brandImage: 'https://yourdomain.com/path-to-your-logo.png', // URL of your logo
+
+  colorPrimary: '#FFC0CB', // Cherry Blossom Pink
+  colorSecondary: '#FFD700', // Warm Gold
+
+
 });

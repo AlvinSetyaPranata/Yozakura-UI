@@ -1,16 +1,5 @@
 import React from "react";
 import { IAlertDescProps } from "src/types/AlertDesc";
-
-function getVariant(variant: String) {
-    switch (variant) {
-      case "info":
-        return "bg-[#2E1E49] text-white";
-      case "error":
-        return "bg-red-500 text-white";
-      case "warning":
-        return "bg-yellow-500 text-white";
-    }
-  }
   
   function getIcon(variant: String) {
     switch (variant) {
@@ -54,7 +43,7 @@ function getVariant(variant: String) {
 const AlertDesc: React.FC<IAlertDescProps> = ({title, desc, variant="info"}) => {
     return (
         <div
-        className={`flex justify-between max-w-xl py-4 px-4 ${getVariant(variant)} rounded-md text-white-500`}
+        className={`flex justify-between max-w-xl py-4 px-4 bg-night text-white dark:bg-sakura dark:text-black rounded-md text-white-500`}
       >
         <div className="flex-1 flex items-center gap-x-4">
           {getIcon(variant)}

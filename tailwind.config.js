@@ -5,7 +5,16 @@ module.exports = {
   // Toggle dark-mode based on .dark class or data-mode="dark"
   darkMode: ['class', '[data-mode="dark"]'],
   theme: {
-    extend: {},
+    extend: {
+      backgroundColor: {
+        'night': '#2E1E49',
+        'sakura': '#FFC0CB'
+      },
+      colors: {
+        'night': '#2E1E49',
+        'sakura' : '#FFC0CB'
+      },
+    },
   },
   plugins: [],
 };

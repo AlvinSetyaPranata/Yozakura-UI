@@ -1,16 +1,16 @@
-import type { Preview } from "@storybook/react";
 import '../src/styles/tailwind.css'
+// .storybook/preview.js
+import { withThemeByDataAttribute } from '@storybook/addon-themes';
 
-const preview: Preview = {
-  parameters: {
-    layout: 'padded',
-    controls: {
-      matchers: {
-        color: /(background|color)$/i,
-        date: /Date$/i,
-      },
+/* snipped for brevity */
+
+export const decorators = [
+  withThemeByDataAttribute({
+    themes: {
+      light: 'light',
+      dark: 'dark',
     },
-  },
-};
-
-export default preview;
+    defaultTheme: 'light',
+    attributeName: 'data-mode',
+  }),
+];
