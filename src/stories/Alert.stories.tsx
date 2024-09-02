@@ -14,7 +14,13 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     text: "There is an update version of this app",
-    variant: 'info'
+  },
+};
+
+export const Info: Story = {
+  args: {
+    text: "There is an update version of this app",
+    variant: "info"
   },
 };
 
