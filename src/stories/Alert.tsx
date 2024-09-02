@@ -2,7 +2,7 @@ import React from "react";
 import { IAlertProps } from "src/types/Alert";
 
 
-function getIcon(variant: String) {
+function getIcon(variant: string|null) {
   switch (variant) {
     case "info":
       return (
@@ -40,7 +40,7 @@ function getIcon(variant: String) {
   }
 }
 
-const Alert: React.FC<IAlertProps> = ({ text, variant = "info" }) => {
+const Alert: React.FC<IAlertProps> = ({ text, variant=null }) => {
   return (
     <div
       className={`flex bg-night dark:bg-sakura dark:text-black text-white justify-between max-w-xl py-4 px-4 rounded-md text-white-500`}
