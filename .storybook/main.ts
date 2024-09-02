@@ -8,7 +8,9 @@ const config: StorybookConfig = {
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/addon-postcss',
-    '@storybook/addon-themes'
+    '@storybook/addon-themes',
+    '@storybook/addon-backgrounds',
+    '@storybook/addon-toolbars',
   ]
 };
 
