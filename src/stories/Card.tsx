@@ -43,7 +43,7 @@ export const withPriceVariant: React.FC<ICardVariantsProps> = ({
       {/* card content */}
       <div className="py-6 px-6 shadow-md">
         <h3 className="font-semibold dark:text-white text-xl line-clamp-2">{title}</h3>
-        <h4 className="mt-2 dark:text-white">$14.00</h4>
+        <h4 className="mt-4 dark:text-white">$14.00</h4>
         <p className="mt-6 line-clamp-3 text-gray-500 dark:text-gray-400">
           {desc}
         </p>
