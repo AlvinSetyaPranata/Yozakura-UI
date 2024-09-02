@@ -8,8 +8,8 @@ const defaultVariant: React.FC<ICardVariantsProps> = ({
 }) => {
   return (
     <div className="rounded-md box-border bg-transparent max-w-[300px]">
-      <div className="rounded-t-md">
-        <img src={image} alt="product-image" />
+      <div className="rounded-t-md overflow-hidden">
+        <img src={image} className="object-fit w-full h-full" alt="product-image" />
       </div>
 
       {/* card content */}
@@ -28,16 +28,42 @@ const defaultVariant: React.FC<ICardVariantsProps> = ({
   );
 };
 
-export const withPriceVariant: React.FC<ICardVariantsProps> = ({
+export const withPriceVariant: React.FC<ICardVariantsProps&{price?: string}> = ({
   title,
   desc,
   image,
-  buttonText
+  buttonText,
+  price
 }) => {
   return (
     <div className="rounded-md box-border bg-transparent max-w-[300px]">
-      <div className="rounded-t-md">
-        <img src={image} alt="product-image" />
+      <div className="rounded-t-md overflow-hidden">
+        <img src={image} className="object-fit w-full h-full"  alt="product-image" />
+      </div>
+
+      {/* card content */}
+      <div className="py-6 px-6 shadow-md">
+        <h3 className="font-semibold dark:text-white text-xl line-clamp-2">{title}</h3>
+        <h4 className="mt-4 dark:text-white">{price}</h4>
+        <p className="mt-6 line-clamp-3 text-gray-500 dark:text-gray-400">
+          {desc}
+        </p>
+        <div className="w-full flex justify-end">
+          <button className="bg-night dark:bg-sakura dark:text-black px-6 py-2 text-white rounded-md text-sm mt-8">
+            {buttonText}
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
+export const withBadge: React.FC<ICardVariantsProps> = ({title, desc, image, buttonText}) => {
+    return (
+        <div className="rounded-md box-border bg-transparent max-w-[300px]">
+      <div className="rounded-t-md overflow-hidden">
+        <img src={image} className="object-fit w-full h-full"  alt="product-image" />
       </div>
 
       {/* card content */}
@@ -54,8 +80,8 @@ export const withPriceVariant: React.FC<ICardVariantsProps> = ({
         </div>
       </div>
     </div>
-  );
-};
+    )
+}
 
 const Card: React.FC<ICardProps> = ({ title, desc, image, buttonText, variant }) => {
   switch (variant) {
